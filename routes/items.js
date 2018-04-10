@@ -1,8 +1,9 @@
+var mongoose = require("mongoose");
 
 module.exports = function(app) {
 
   var Item = require('../models/item.js');
-
+  
   findAllItems = function(req, res) {
   	Item.find(function(err, tvshows) {
   		if(!err) {
@@ -28,13 +29,18 @@ module.exports = function(app) {
   addItem = function(req, res) {
   	console.log('POST');
   	console.log(req.body);
-
+    
+    var myData = new Item(req.body);
+    myData.save().then(item => {
+        res.send("item saved to database");
+    })
+    /*
   	var item = new Item({
   		nid:    req.body.nid,
   		valor: 	  req.body.valor
-  	});
+  	});*/
 
-  	item.save(function(err) {
+  	myData.save(function(err) {
   		if(!err) {
   			console.log('Created');
   		} else {
@@ -42,8 +48,9 @@ module.exports = function(app) {
   		}
   	});
 
-  	res.send(item);
+  	res.send(myData);
   };
+  
 
   updateItem = function(req, res) {
   	item.findById(req.params.id, function(err, item) {

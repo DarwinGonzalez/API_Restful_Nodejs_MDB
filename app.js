@@ -11,8 +11,8 @@ var express  = require("express"),
   app.use(app.router);
 });*/
 
-app.get('/', function(req, res) {
-  res.send("Hello world!");
+app.get("/", (req, res) => {
+ res.sendFile(__dirname + "/index.html");
 });
 
 routes = require('./routes/items')(app);
@@ -25,6 +25,6 @@ mongoose.connect('mongodb://localhost/items', function(err, res) {
 	}
 });
 
-server.listen(3000, function() {
+server.listen(process.env.PORT, function() {
   console.log("Node server running on http://localhost:3000");
 });
