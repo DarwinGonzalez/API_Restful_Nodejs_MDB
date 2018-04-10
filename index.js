@@ -22,7 +22,7 @@ app.set('view engine', 'ejs')
 app.set('port', (process.env.PORT || 4000))
 
 app.use(cookie())
-app.use(session({secret: 'darwinmakenfgt', resave: true, saveUninitialized: true }))
+app.use(session({secret: 'darwin', resave: true, saveUninitialized: true }))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname + "/public")))
