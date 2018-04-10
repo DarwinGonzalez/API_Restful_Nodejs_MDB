@@ -1,0 +1,19 @@
+{
+  "name": "api_restful_mongodb",
+  "version": "1.0.0",
+  "description": "API RESTful con una base de datos en MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarwinGonzalez/API_Restful_Nodejs_MDB.git"
+  },
+  "author": "Darwin Gonzalez Suarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarwinGonzalez/API_Restful_Nodejs_MDB/issues"
+  },
+  "homepage": "https://github.com/DarwinGonzalez/API_Restful_Nodejs_MDB#readme"
+}
