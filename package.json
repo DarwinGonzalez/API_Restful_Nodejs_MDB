@@ -1,19 +1,26 @@
 {
-  "name": "api_restful_mongodb",
+  "name": "darwin",
   "version": "1.0.0",
-  "description": "API RESTful con una base de datos en MongoDB",
+  "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node -- index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DarwinGonzalez/API_Restful_Nodejs_MDB.git"
-  },
-  "author": "Darwin Gonzalez Suarez",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DarwinGonzalez/API_Restful_Nodejs_MDB/issues"
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.14"
   },
-  "homepage": "https://github.com/DarwinGonzalez/API_Restful_Nodejs_MDB#readme"
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
 }
