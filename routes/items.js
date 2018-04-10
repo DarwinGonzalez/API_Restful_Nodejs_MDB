@@ -28,9 +28,13 @@ module.exports = function(app) {
   };
 
   findByNid = function(req, res) {
-	Item.findByNid(req.params.nid, function(err, item) {
+	Item.findByNid(req.body.nid, function(err, item) {
+		console.log(req.body.nid);
+		console.log(req.params.nid);
+		console.log(req.session.nid);
+
 		if(!err) {
-	  console.log('GET /itemnid/' + req.params.nid);
+	  console.log('GET /itemnid/' + req.body.nid);
 			res.send(item);
 		} else {
 			console.log('ERROR: ' + err);

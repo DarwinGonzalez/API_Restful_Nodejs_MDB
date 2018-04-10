@@ -25,6 +25,6 @@ mongoose.connect('mongodb://localhost/items', function(err, res) {
 	}
 });
 
-server.listen(3001, function() {
+server.listen(3004, function() {
   console.log("Node server running on http://localhost:3000");
 });
