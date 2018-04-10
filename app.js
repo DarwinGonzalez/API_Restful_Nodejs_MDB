@@ -4,13 +4,7 @@ var express  = require("express"),
     http     = require("http"),
     server   = http.createServer(app),
     mongoose = require('mongoose'); 
-
-/*app.configure(function () {
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(app.router);
-});*/
-
+    
 app.get("/", (req, res) => {
  res.sendFile(__dirname + "/index.html");
 });

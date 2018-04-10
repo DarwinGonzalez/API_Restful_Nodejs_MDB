@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 var itemSchema = new Schema({
-	nid: 		{ type: Number },
+	nid: 		{ type: String },
 	valor: 		{ type: String }
 });
 

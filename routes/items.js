@@ -28,17 +28,17 @@ module.exports = function(app) {
 
   addItem = function(req, res) {
   	console.log('POST');
-  	console.log(req.body);
+  	console.log(req.body.nid);
+  	console.log(req.body.valor);
     
-    var myData = new Item(req.body);
+    var myData = new Item({
+  		nid:    req.body.nid,
+  		valor: 	  req.body.valor
+  	});
+    
     myData.save().then(item => {
         res.send("item saved to database");
     })
-    /*
-  	var item = new Item({
-  		nid:    req.body.nid,
-  		valor: 	  req.body.valor
-  	});*/
 
   	myData.save(function(err) {
   		if(!err) {
