@@ -1,2 +1,2 @@
-# API_Restful_Nodejs_MDB
-API RESTful con una base de datos en MongoDB
+# API Restful Nodejs MDB
+API RESTful con una base de datos en MongoDB para la práctica de Desarrollo de Sistemas Informáticos
