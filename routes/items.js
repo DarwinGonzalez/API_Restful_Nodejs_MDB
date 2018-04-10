@@ -3,7 +3,6 @@ module.exports = function(app) {
 
   var Item = require('../models/item.js');
 
-  //GET - Return all Items in the DB
   findAllItems = function(req, res) {
   	Item.find(function(err, tvshows) {
   		if(!err) {
@@ -15,7 +14,6 @@ module.exports = function(app) {
   	});
   };
 
-  //GET - Return a TVShow with specified ID
   findById = function(req, res) {
   	Item.findById(req.params.id, function(err, item) {
   		if(!err) {
@@ -27,7 +25,6 @@ module.exports = function(app) {
   	});
   };
 
-  //POST - Insert a new TVShow in the DB
   addItem = function(req, res) {
   	console.log('POST');
   	console.log(req.body);
@@ -48,7 +45,6 @@ module.exports = function(app) {
   	res.send(item);
   };
 
-  //PUT - Update a register already exists
   updateItem = function(req, res) {
   	item.findById(req.params.id, function(err, item) {
   		item.nid   = req.body.nid;
@@ -65,7 +61,6 @@ module.exports = function(app) {
   	});
   }
 
-  //DELETE - Delete a TVShow with specified ID
   deleteItem = function(req, res) {
   	Item.findById(req.params.id, function(err, item) {
   		item.remove(function(err) {
